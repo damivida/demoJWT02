@@ -1,8 +1,5 @@
 package com.example.demoJWT02.service;
 
-import java.security.SecureRandom;
-import java.util.ArrayList;
-
 import com.example.demoJWT02.dao.UserDao;
 import com.example.demoJWT02.model.DAOUser;
 import com.example.demoJWT02.model.UserDTO;
@@ -10,10 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.argon2.Argon2PasswordEncoder;
-import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
 
 
 
@@ -62,4 +59,6 @@ public class JwtUserDetailsService implements UserDetailsService {
         
         return  userDao.save(newUser);
     }
+
+    //testing version control
 }
